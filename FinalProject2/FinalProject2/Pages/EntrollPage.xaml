@@ -1,0 +1,47 @@
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProject2.EntrollPage"
+             Title="EntrollPage">
+
+    <StackLayout Margin="100,20,100,0" Spacing="5">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Student" HorizontalOptions="CenterAndExpand" />
+            <Label Text="Course" HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <ListView x:Name="lstStudents" HorizontalOptions="CenterAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ListView x:Name="lstCourses" HorizontalOptions="CenterAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding CourseName}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <Button Text="Add" Clicked="Enrollment_Add"/>
+        <Button Text="Show" Clicked="Enrollment_Show" />
+        <Label Text="Enrolls" />
+        <ListView x:Name="lstEnrollments">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Stu_ID, StringFormat='Student ID: {0}'}" />
+                            <Label Text="{Binding Crs_Code, StringFormat='Course Code: {0}'}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Delete" Clicked="Enrollment_Delete_Button"/>
+    </StackLayout>
+
+
+</ContentPage>

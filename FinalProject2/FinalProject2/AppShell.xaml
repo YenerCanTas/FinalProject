@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="FinalProject2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:FinalProject2"
+    Shell.FlyoutBehavior="Disabled"
+    Title="FinalProject2">
+
+
+
+    <TabBar>
+        <Tab Title="Student" Icon="student.png.png">
+            <ShellContent ContentTemplate="{DataTemplate local:StudentPage}" Route="StudentPage"/>
+        </Tab>
+
+        <Tab Title="Course" Icon="course.png.png">
+            <ShellContent ContentTemplate="{DataTemplate local:CoursePage}" Route="CoursePage"/>
+        </Tab>
+
+        <Tab Title="Entroll" Icon="entroll.png.png">
+            <ShellContent ContentTemplate="{DataTemplate local:EntrollPage}" Route="EntrollPage"/>
+        </Tab>
+
+
+    </TabBar>
+
+
+
+</Shell>
